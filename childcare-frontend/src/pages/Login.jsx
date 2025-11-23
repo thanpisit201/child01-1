@@ -30,7 +30,7 @@ export default function Login() {
       const loggedUser = await login(username.trim(), password);
 
       // ✅ แยกปลายทางตาม type
-      if (loggedUser?.type === "parent") {
+      if (loggedUser?.type === "parents") {
         // ผู้ปกครอง → ไปหน้า Index
         nav("/index", { replace: true }); // เปลี่ยน path ตามที่ตั้ง route ไว้
       } else {
